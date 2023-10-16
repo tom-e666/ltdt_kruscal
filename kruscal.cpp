@@ -26,7 +26,7 @@ void readgraph(const string &name, graph &g)
     }
     f >> g.dinh;
     for (int i = 1; i <= g.dinh; ++i)
-        for (int j = 0; j <= g.dinh; ++j)
+        for (int j = 1; j <= g.dinh; ++j)
         {
             f >> g.canh[i][j];
             if (g.canh[i][j] && i < j)
@@ -85,6 +85,6 @@ int main()
     kruscal(g, T, Nhan, nT);
     for (int i = 0; i < nT; ++i)
     {
-        cout << T[i].u << " " << T[i].v << endl;
+        cout << T[i].u << " " << T[i].v << " " << T[i].w << endl;
     }
 }
